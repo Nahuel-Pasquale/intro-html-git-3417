@@ -11,6 +11,7 @@ const productos = [
 		precio: 6500,
 		subcategoria: "Perifericos",
 		ubicacion: "GBA",
+    ingredientes: [1,2,3,4]
 	},
 	{
 		categoria: "Computacion",
@@ -144,6 +145,12 @@ const productos = [
 	},
 ];
 
+// pizzas.forEach((pizza) => {
+//   const ingredientes = pizza.ingredientes
+//   ingredientes.forEach((ingrediente) => {
+//     console.log(ingrediente);
+//   })
+// })
 
 // 1. Imprimir en consola todos los productos que tengan id par. El mensaje tiene que ser user Friendly, es decir, que el usuario entienda que es lo que se está mostrando en consola.
 
