@@ -311,4 +311,10 @@ const productos = [
 // console.log(ordenarDeMayorAMenorEnBaseAlNombre());
 
 
+const fechaActual = new Date();
+const zonaHorariaOffset = -2 * 60 * 60 * 1000;
+const fechaEnZonaHoraria = new Date(fechaActual.getTime());
+// fechaEnZonaHoraria.setHours(fechaEnZonaHoraria.getHours() + 2);
+const formatoFechaHora = fechaEnZonaHoraria.toISOString();
 
+console.log(formatoFechaHora)

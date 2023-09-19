@@ -224,6 +224,24 @@ footer {
   overflow: auto;
 }
 
+.hidden {
+  display: none;
+}
+
+.mostrar-productos{
+  font-size: 22px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* .mostrar-productos:hover{
+  
+} */
+
+.list-item {
+  font-size: 20px;
+  color: red;
+}
+
 /* Celu */
 @media screen and (min-width: 250px) and (max-width: 480px) {
   .kuni {
