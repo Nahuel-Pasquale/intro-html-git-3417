@@ -184,6 +184,64 @@ const crearLista = (arr) => {
 
 crearLista(productos);
 
+const productsSpan = document.getElementById('vista-productos');
+const icon = document.getElementById('icon');
+const inputName = document.getElementById('input-pw');
+
+const handleClick = () => {
+	if(lista.classList.contains('hidden')){
+		lista.classList.remove('hidden');
+		productsSpan.transition = 'color 0.3s ease-in-out'
+		productsSpan.style.color = 'red'
+		productsSpan.textContent = 'ocultar productos'
+		icon.classList.remove('rotate90')
+		icon.classList.add('rotate-90')
+		console.log(icon.classList);
+		return;
+	}
+	lista.classList.add('hidden');
+	productsSpan.style.color = 'green'
+	icon.classList.remove('rotate-90')
+	icon.classList.add('rotate90')
+	productsSpan.textContent = 'mostrar productos'
+	console.log(icon.classList);
+}
+
+// const handleClick = () => lista.classList.toggle('hidden');
+console.log(inputName);
+const handleChange = (e) => {
+	const valor = e.target.value;
+	console.log('el valor cambio a: ', e.target.value);
+	const tieneEspacios = valor.split(" ");
+	console.log(tieneEspacios);
+	if(tieneEspacios.length > 1 ) {
+		inputName.style.outline = '1px solid red'
+		return
+	}
+	if(valor.length === 0){
+		inputName.style.outline = 'none'
+		return
+	}
+	if(valor.length > 7){
+		inputName.style.outline = '1px solid green';
+		return
+	}
+	inputName.style.outline = '1px solid red'
+}
+
+productsSpan.addEventListener('click', handleClick);
+// inputName.addEventListener('focus', (e) => {
+// 	console.log('focus');
+// });
+// inputName.addEventListener('blur', (e) => {
+// 	console.log('blur');
+// });
+// inputName.addEventListener('change', handleChange);
+inputName.addEventListener('input', handleChange);
+// productsSpan.addEventListener('click', (e) => handleClick(e));
+
+
+
 
 
 
