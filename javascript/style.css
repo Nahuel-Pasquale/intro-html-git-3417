@@ -258,6 +258,64 @@ footer {
   color: red;
 }
 
+/* CARD */
+
+  /* Decoration */
+  /* --rose: #e11d48;
+  --light-red: #ff005c;
+  --purple: #8c54fb; */
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  border: 1px solid var(--light-red);
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-p {
+  font-size: 1rem;
+}
+
+.card-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: inherit;
+  color: var(--dark-white);
+  border-radius: 5px;
+  border: 1px solid var(--light-red);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-button:hover {
+  background-color: var(--light-red);
+  color: var(--dark-white);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
 /* Celu */
 @media screen and (min-width: 250px) and (max-width: 480px) {
   .kuni {
