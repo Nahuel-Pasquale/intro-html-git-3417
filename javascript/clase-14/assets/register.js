@@ -11,7 +11,7 @@ const saveLocalStorage = () => {
   localStorage.setItem('users', JSON.stringify(users));
 }
 
-console.log('users ==> ',  users)
+const activeUser = JSON.parse(sessionStorage.getItem('activeUser'));
 
 // FUNCIONES AUXILIARES
 
@@ -175,14 +175,21 @@ const validateForm = (e) => {
     alert('Te has registrado con exito!');
   };
 
-  // MANDARLO A LA PAGINA LOGIN
+  window.location.href = './login.html';
 
 }
 
 const init = () => {
   registerForm.addEventListener('submit', validateForm);
-
   nameInput.addEventListener('input', () => checkTextInput(nameInput));
+  lastNameInput.addEventListener('input', () => checkTextInput(lastNameInput));
+  emailInput.addEventListener('input', () => checkEmail(emailInput));
+  passwordInput.addEventListener('input', () => checkPassword(passwordInput));
+  phoneInput.addEventListener('input', () => checkPhone(phoneInput));
+
+  if(activeUser){
+    window.location.href = './home.html';
+  }
 }
 
 init();
