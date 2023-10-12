@@ -135,3 +135,19 @@ const productsData = [
     cardImg: "./assets/img/products/jolie.png",
   },
 ];
+
+const DivideProductsInParts = (size) => {
+  const productsList = [];
+  for(let i = 0; i < productsData.length; i += size)
+    productsList.push(productsData.slice(i, i + size));
+  console.log(productsList)
+  return productsList;
+}
+
+
+const appState = {
+  products: DivideProductsInParts(2),
+  currentProductsIndex: 0,
+  productsLimit: DivideProductsInParts(2).length,
+  activeFilter: null,
+}
