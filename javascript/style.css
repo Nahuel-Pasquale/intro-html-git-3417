@@ -269,6 +269,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -277,16 +278,19 @@ footer {
   border-radius: 5px;
   padding: 20px;
   max-width: 300px;
+  width: 400px;
+  height: 400px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .card-img {
-  width: 100%;
+  /* width: 100%; */
+  height: 100px;
   border-radius: 5px;
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .card-p {
